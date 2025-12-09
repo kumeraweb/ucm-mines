@@ -1,0 +1,78 @@
+---
+import { site } from '../data/site'
+
+const phoneHref = `tel:${site.phone}`
+const waHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.cta.whatsappMessage)}`
+---
+
+<nav class="w-full border-b border-gray-200 bg-white">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- LOGO -->
+    <a href="/" class="flex items-center">
+      <img src="/logo.png" alt="Logo" class="h-24 w-auto" />
+    </a>
+
+    <!-- DESKTOP MENU -->
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="#inicio" class="text-gray-700 hover:text-gray-900">Inicio</a>
+      <a href="#planes" class="text-gray-700 hover:text-gray-900">Planes</a>
+      <a href="#servicios" class="text-gray-700 hover:text-gray-900">Servicios</a>
+      <a href="#contacto" class="text-gray-700 hover:text-gray-900">Contacto</a>
+
+      <a
+        href={waHref}
+        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+      >
+        WhatsApp
+      </a>
+
+      <a
+        href={phoneHref}
+        class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+      >
+        Llamar
+      </a>
+    </div>
+
+    <!-- HAMBURGER BUTTON -->
+    <button id="mobile-toggle" class="md:hidden flex flex-col space-y-1">
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+    </button>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden flex-col px-4 pb-4 bg-white border-t border-gray-200 space-y-4"
+  >
+    <a href="#inicio" class="text-gray-700 hover:text-gray-900">Inicio</a>
+    <a href="#planes" class="text-gray-700 hover:text-gray-900">Planes</a>
+    <a href="#servicios" class="text-gray-700 hover:text-gray-900">Servicios</a>
+    <a href="#contacto" class="text-gray-700 hover:text-gray-900">Contacto</a>
+
+    <a
+      href={waHref}
+      class="block text-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+    >
+      WhatsApp
+    </a>
+
+    <a
+      href={phoneHref}
+      class="block text-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+    >
+      Llamar
+    </a>
+  </div>
+</nav>
+
+<script is:inline>
+  const btn = document.getElementById('mobile-toggle')
+  const menu = document.getElementById('mobile-menu')
+
+  btn?.addEventListener('click', () => {
+    menu.classList.toggle('hidden')
+  })
+</script>

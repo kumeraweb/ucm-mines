@@ -1,0 +1,46 @@
+---
+import { site } from '../data/site'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import '../styles/global.css'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const { title, description } = Astro.props as Props
+
+const pageTitle = title ?? site.seo.title
+const pageDescription = description ?? site.seo.description
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://planatencionhogar.cl/" />
+
+    <!-- Si tienes un global.css, ajústalo al path correcto -->
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+
+  <body class="min-h-screen bg-white text-gray-800 antialiased">
+    <header>
+      <Header />
+    </header>
+
+    <main class="min-h-[70vh]">
+      <slot />
+    </main>
+
+    <footer>
+      <Footer />
+    </footer>
+  </body>
+</html>

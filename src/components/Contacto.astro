@@ -1,0 +1,56 @@
+---
+import { site } from '../data/site'
+const waHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.cta.whatsappMessage)}`
+const phoneHref = `tel:${site.phone}`
+---
+
+<section id="contacto" class="w-full py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">Contacto Directo</h2>
+
+    <p class="text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+      Para recibir orientación independiente sobre alternativas de atención particular, puede
+      comunicarse directamente a través de los siguientes medios.
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+      <a
+        href={waHref}
+        class="px-6 py-3 bg-green-600 text-white rounded-full font-medium hover:bg-green-700 transition text-center w-full sm:w-auto"
+      >
+        📲 WhatsApp
+      </a>
+
+      <a
+        href={phoneHref}
+        class="px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition text-center w-full sm:w-auto"
+      >
+        📞 Llamar
+      </a>
+
+      <a
+        href={`mailto:${site.email}`}
+        class="px-6 py-3 bg-gray-700 text-white rounded-full font-medium hover:bg-gray-800 transition text-center w-full sm:w-auto"
+      >
+        📧 Enviar correo
+      </a>
+    </div>
+
+    <div
+      class="bg-gray-50 border border-gray-200 rounded-xl p-6 text-left max-w-xl mx-auto shadow-sm"
+    >
+      <h3 class="text-xl font-semibold text-gray-900 mb-3">Horario de Atención</h3>
+
+      <ul class="text-gray-600 leading-relaxed text-sm">
+        <li>Lunes a Viernes: 09:00 – 19:00 hrs</li>
+        <li>Sábado: 10:00 – 14:00 hrs</li>
+        <li>Domingo y festivos: Atención por WhatsApp</li>
+      </ul>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-10 max-w-2xl mx-auto">
+      La asesoría es independiente y de carácter comercial. Los servicios de salud son prestados
+      exclusivamente por la empresa correspondiente.
+    </p>
+  </div>
+</section>
