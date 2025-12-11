@@ -4,52 +4,45 @@ const waHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.ct
 const phoneHref = `tel:${site.phone}`
 ---
 
-<section id="contacto" class="w-full py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-4 text-center">
-    <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">Contacto Directo</h2>
+<section id="contacto" class="w-full py-20 bg-gray-50 border-t border-gray-200">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">¿Necesitas más información?</h2>
 
-    <p class="text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-      Para recibir orientación independiente sobre alternativas de atención particular, puede
-      comunicarse directamente a través de los siguientes medios.
+    <p class="text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+      Recibe orientación clara y directa sobre alternativas de asistencia particular. Atención
+      rápida y sin compromiso.
     </p>
 
-    <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+    <!-- Botones principales -->
+    <div class="flex flex-col md:flex-row justify-center gap-4 mb-14">
       <a
         href={waHref}
-        class="px-6 py-3 bg-green-600 text-white rounded-full font-medium hover:bg-green-700 transition text-center w-full sm:w-auto"
+        class="px-8 py-3 rounded-full bg-green-600 text-white font-semibold hover:bg-green-700 transition shadow-md w-full md:w-auto text-center"
       >
-        📲 WhatsApp
+        📲 Consultar por WhatsApp
       </a>
 
       <a
         href={phoneHref}
-        class="px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition text-center w-full sm:w-auto"
+        class="px-8 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition shadow-md w-full md:w-auto text-center"
       >
-        📞 Llamar
-      </a>
-
-      <a
-        href={`mailto:${site.email}`}
-        class="px-6 py-3 bg-gray-700 text-white rounded-full font-medium hover:bg-gray-800 transition text-center w-full sm:w-auto"
-      >
-        📧 Enviar correo
+        📞 Llamar Ahora
       </a>
     </div>
 
-    <div
-      class="bg-gray-50 border border-gray-200 rounded-xl p-6 text-left max-w-xl mx-auto shadow-sm"
-    >
-      <h3 class="text-xl font-semibold text-gray-900 mb-3">Horario de Atención</h3>
+    <!-- Tarjeta de información -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm max-w-xl mx-auto">
+      <h3 class="text-xl font-semibold text-gray-900 mb-4">Horario de Atención</h3>
 
-      <ul class="text-gray-600 leading-relaxed text-sm">
+      <ul class="text-gray-700 leading-relaxed text-sm md:text-base space-y-2">
         <li>Lunes a Viernes: 09:00 – 19:00 hrs</li>
         <li>Sábado: 10:00 – 14:00 hrs</li>
         <li>Domingo y festivos: Atención por WhatsApp</li>
       </ul>
     </div>
 
-    <p class="text-xs text-gray-500 mt-10 max-w-2xl mx-auto">
-      La asesoría es independiente y de carácter comercial. Los servicios de salud son prestados
+    <p class="text-xs md:text-sm text-gray-500 mt-10 max-w-3xl mx-auto">
+      La asesoría es independiente y de carácter comercial. Toda prestación de salud es realizada
       exclusivamente por la empresa correspondiente.
     </p>
   </div>

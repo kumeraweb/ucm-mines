@@ -1,70 +1,132 @@
 ---
 import { site } from '../data/site'
-const waHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.cta.whatsappMessage)}`
 ---
 
-<section id="planes" class="w-full py-20 bg-white border-b border-gray-200">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-      Planes de Atención Particular
+<section id="planes" class="py-20 bg-white border-b border-gray-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-6">
+      Planes de asistencia para tu familia
     </h2>
 
-    <p class="text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
-      Reciba orientación independiente sobre alternativas de atención particular y servicios
-      complementarios. La información que se entrega aquí tiene un carácter comercial e informativo,
-      sin representar a ninguna empresa prestadora de salud.
+    <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+      Existen alternativas de asistencia privada que combinan rescate en ambulancia y apoyo médico
+      para distintos momentos de tu vida. La ejecutiva te orientará sobre cuál se adapta mejor a tu
+      realidad.
     </p>
 
-    <!-- GRID DE PLANES -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- PLAN 1 -->
-      <div class="border border-gray-200 rounded-xl p-6 shadow-sm text-left bg-gray-50">
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Plan Familiar</h3>
-        <p class="text-gray-600 mb-4 leading-relaxed">
-          Orientación sobre alternativas para grupos familiares que buscan un plan de apoyo
-          particular.
-        </p>
-        <a
-          href={waHref}
-          class="inline-block px-5 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition"
-        >
-          Solicitar información
-        </a>
+    <div class="space-y-10">
+      {/* PLAN FAMILIAR / PRINCIPAL */}
+      <div
+        class="bg-gray-50 text-gray-900 border border-gray-200 rounded-3xl shadow-xl overflow-hidden border-t-4 border-blue-600"
+      >
+        <div class="md:flex md:items-stretch">
+          {/* Columna izquierda: nombre y precio de referencia */}
+          <div class="md:w-1/2 px-8 md:px-12 py-10 md:py-14 flex flex-col justify-center">
+            <h3 class="text-3xl md:text-4xl font-extrabold tracking-wide mb-4">Plan Familiar</h3>
+
+            <div class="flex items-baseline gap-3 mb-4">
+              <span class="text-sm uppercase tracking-[0.18em]">Desde</span>
+              <span class="text-4xl md:text-5xl font-extrabold">UF 0,59</span>
+              <span class="text-base md:text-lg font-medium opacity-90">/ mensual</span>
+            </div>
+
+            <p class="text-base md:text-lg opacity-95">
+              Pensado para familias que quieren contar con ambulancia ante situaciones de riesgo
+              vital y urgencias médicas, además de apoyo de salud programado.
+            </p>
+          </div>
+
+          {/* Columna derecha: beneficios */}
+          <div class="md:w-1/2 bg-white px-8 md:px-12 py-10 md:py-14 flex flex-col justify-center">
+            <h4 class="text-lg font-semibold mb-6">
+              ¿Qué tipo de beneficios incluye este tipo de plan?
+            </h4>
+
+            <ul class="divide-y divide-blue-300/60 text-sm md:text-base">
+              <li class="py-2.5">Rescate en ambulancia frente a emergencias y riesgo vital</li>
+              <li class="py-2.5">
+                Atenciones de salud programadas según la alternativa contratada
+              </li>
+              <li class="py-2.5">Servicios anuales adicionales para complementar la protección</li>
+              <li class="py-2.5">
+                Cobertura en zonas definidas, informadas por la ejecutiva al momento de cotizar
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* CTA inferior centrado */}
+        <div class="border-t border-blue-400/60 px-8 md:px-12 py-6 flex justify-center">
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
+              'Quiero cotizar el plan familiar de asistencia privada'
+            )}`}
+            class="inline-flex items-center justify-center px-7 py-3 rounded-full bg-blue-600 text-white font-semibold text-sm md:text-base hover:bg-blue-700 transition"
+          >
+            Cotizar Plan Familiar por WhatsApp
+          </a>
+        </div>
       </div>
 
-      <!-- PLAN 2 -->
-      <div class="border border-gray-200 rounded-xl p-6 shadow-sm text-left bg-gray-50">
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Plan Individual</h3>
-        <p class="text-gray-600 mb-4 leading-relaxed">
-          Opciones diseñadas para personas que buscan apoyo particular y servicios complementarios.
-        </p>
-        <a
-          href={waHref}
-          class="inline-block px-5 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition"
-        >
-          Solicitar información
-        </a>
-      </div>
+      {/* PLAN SENIOR */}
+      <div
+        class="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden border-t-4 border-gray-600"
+      >
+        <div class="md:flex md:items-stretch">
+          {/* Columna izquierda: nombre y precio de referencia */}
+          <div class="md:w-1/2 px-8 md:px-12 py-10 md:py-14 flex flex-col justify-center">
+            <h3 class="text-3xl md:text-4xl font-extrabold tracking-wide text-gray-900 mb-4">
+              Plan Senior
+            </h3>
 
-      <!-- PLAN 3 -->
-      <div class="border border-gray-200 rounded-xl p-6 shadow-sm text-left bg-gray-50">
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Plan Para Adulto Mayor</h3>
-        <p class="text-gray-600 mb-4 leading-relaxed">
-          Alternativas pensadas para quienes buscan apoyo particular adicional para adultos mayores.
-        </p>
-        <a
-          href={waHref}
-          class="inline-block px-5 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition"
-        >
-          Solicitar información
-        </a>
+            <div class="flex items-baseline gap-3 mb-4">
+              <span class="text-sm uppercase tracking-[0.18em] text-gray-500">Desde</span>
+              <span class="text-4xl md:text-5xl font-extrabold text-gray-900">UF 1</span>
+              <span class="text-base md:text-lg font-medium text-gray-700">/ mensual</span>
+            </div>
+
+            <p class="text-base md:text-lg text-gray-700">
+              Dirigido a personas mayores que necesitan apoyo más frecuente, combinando rescate en
+              ambulancia con asistencia de salud y atenciones con copago preferente.
+            </p>
+          </div>
+
+          {/* Columna derecha: beneficios */}
+          <div
+            class="md:w-1/2 bg-gray-100 px-8 md:px-12 py-10 md:py-14 flex flex-col justify-center"
+          >
+            <h4 class="text-lg font-semibold text-gray-900 mb-6">
+              Beneficios habituales en este tipo de plan
+            </h4>
+
+            <ul class="divide-y divide-gray-200 text-sm md:text-base text-gray-800">
+              <li class="py-2.5">Rescates en ambulancia ante urgencias y descompensaciones</li>
+              <li class="py-2.5">
+                Atenciones médicas y de especialidad con copago preferente o $0, según condiciones
+              </li>
+              <li class="py-2.5">Cupos para exámenes de laboratorio y radiología en el año</li>
+              <li class="py-2.5">Evaluaciones y controles pensados para adultos mayores</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* CTA inferior centrado */}
+        <div class="border-t border-gray-200 px-8 md:px-12 py-6 flex justify-center">
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
+              'Quiero cotizar el plan senior de asistencia privada'
+            )}`}
+            class="inline-flex items-center justify-center px-7 py-3 rounded-full bg-gray-800 text-white font-semibold text-sm md:text-base hover:bg-gray-900 transition"
+          >
+            Cotizar Plan Senior por WhatsApp
+          </a>
+        </div>
       </div>
     </div>
 
-    <p class="text-xs text-gray-500 mt-10 max-w-2xl mx-auto">
-      La asesoría entregada es independiente y no representa a ninguna institución médica. Los
-      servicios de salud, en caso de contratarlos, son prestados exclusivamente por la empresa
-      correspondiente y bajo sus propios términos.
+    <p class="text-xs md:text-sm text-gray-500 mt-6 text-center max-w-3xl mx-auto">
+      Los valores y beneficios específicos dependen del plan vigente al momento de contratar y serán
+      explicados en detalle por la ejecutiva antes de que tomes cualquier decisión.
     </p>
   </div>
 </section>

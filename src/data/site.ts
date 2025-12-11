@@ -1,20 +1,24 @@
 export const site = {
-  name: 'Ejecutiva Autorizada',
+  name: 'Asesoría Particular',
   city: 'Región de Valparaíso',
   phone: '+56983589813',
   whatsapp: '56983589813',
   email: 'mariamoraeum@gmail.com',
+
   hero: {
     headline: 'Orientación en Planes de Atención Particular',
     subheadline:
-      'Información clara y asesoría independiente para elegir un plan de atención adecuado para usted y su familia.'
+      'Reciba asesoría independiente y neutral para comprender opciones de atención domiciliaria y asistencia familiar.'
   },
+
   seo: {
-    title: 'Planes de Atención Prehospitalaria – Asesoría Independiente',
+    title: 'Planes de Atención Particular – Asesoría Independiente',
     description:
-      'Reciba orientación independiente sobre planes de atención prehospitalaria. Información clara, neutral y confiable.'
+      'Información clara y orientación independiente sobre alternativas de atención particular en el hogar. Asesoría sin compromiso.'
   },
+
   cta: {
-    whatsappMessage: 'Hola, quisiera recibir orientación sobre planes de atención particular.'
+    whatsappMessage:
+      'Hola, quisiera recibir orientación sobre opciones de atención particular en el hogar.'
   }
 }

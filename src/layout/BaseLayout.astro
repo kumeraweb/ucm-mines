@@ -3,6 +3,7 @@ import { site } from '../data/site'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import '../styles/global.css'
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro'
 
 interface Props {
   title?: string
@@ -26,8 +27,6 @@ const pageDescription = description ?? site.seo.description
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://planatencionhogar.cl/" />
 
-    <!-- Si tienes un global.css, ajústalo al path correcto -->
-    <link rel="stylesheet" href="/styles/global.css" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17790061115"></script>
     <script is:inline>
@@ -44,6 +43,7 @@ const pageDescription = description ?? site.seo.description
     <header>
       <Header />
     </header>
+    <FloatingWhatsApp />
 
     <main class="min-h-[70vh]">
       <slot />
