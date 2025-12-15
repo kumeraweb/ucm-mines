@@ -1,15 +1,17 @@
 ---
-import { site } from '../data/site'
+import { SEO } from '../data/seo'
 
-const phoneHref = `tel:${site.phone}`
-const waHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.cta.whatsappMessage)}`
+const phoneHref = `tel:${SEO.identity.contact.phone}`
+const waHref = `https://wa.me/${SEO.identity.contact.whatsapp}?text=${encodeURIComponent(
+  'Hola, quisiera recibir asesoría sobre planes de asistencia privada'
+)}`
 ---
 
 <nav class="w-full border-b border-gray-200 bg-white">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
     <!-- LOGO -->
     <a href="/" class="flex items-center">
-      <span class="text-xl font-semibold text-gray-800">Coronaria&nbsp;Móvil</span>
+      <span class="text-xl font-semibold text-gray-800"> Asesoría en Asistencia Privada </span>
     </a>
 
     <!-- DESKTOP MENU -->

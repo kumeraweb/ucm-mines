@@ -1,47 +1,52 @@
 ---
-import { site } from '../data/site'
-const waHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.cta.whatsappMessage)}`
+import { SEO } from '../data/seo'
+const waHref = `https://wa.me/${SEO.identity.contact.whatsapp}?text=${encodeURIComponent(
+  'Quiero recibir orientación sobre planes de asistencia privada'
+)}`
 ---
 
 <section id="servicios" class="w-full py-20 bg-gray-50 border-b border-gray-200">
   <div class="max-w-6xl mx-auto px-4 text-center">
     <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
-      Servicios de Apoyo Particular
+      Asesoría en planes de asistencia privada
     </h2>
 
     <p class="text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
-      Reciba orientación independiente sobre diferentes alternativas de apoyo particular que pueden
-      complementar la seguridad y bienestar de su hogar. Esta información es de carácter comercial e
-      informativo.
+      Orientación comercial independiente para personas y familias que buscan información clara
+      sobre planes de rescate en ambulancia privada y asistencia médica prehospitalaria.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- SERVICIO 1 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-left">
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Asesoría Personalizada</h3>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          Asesoría en planes de rescate en ambulancia
+        </h3>
         <p class="text-gray-600 mb-4 leading-relaxed">
-          Información clara sobre alternativas de apoyo particular según sus necesidades personales
-          o familiares.
+          Información general sobre planes de rescate en ambulancia privada, activación ante
+          emergencias y criterios habituales de cobertura.
         </p>
       </div>
 
       <!-- SERVICIO 2 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-left">
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Planes Familiares e Individuales</h3>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          Orientación para familias y adultos mayores
+        </h3>
         <p class="text-gray-600 mb-4 leading-relaxed">
-          Orientación independiente sobre opciones disponibles para personas y familias que buscan
-          respaldo adicional.
+          Apoyo informativo para familias y personas mayores que evalúan alternativas de asistencia
+          médica prehospitalaria según edad y necesidades.
         </p>
       </div>
 
       <!-- SERVICIO 3 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-left">
         <h3 class="text-xl font-semibold text-gray-900 mb-3">
-          Información sobre Servicios Complementarios
+          Información sobre asistencia médica prehospitalaria
         </h3>
         <p class="text-gray-600 mb-4 leading-relaxed">
-          Detalles generales sobre alternativas particulares que pueden complementar la seguridad de
-          su hogar.
+          Explicación general sobre cómo funcionan los servicios de atención prehospitalaria,
+          evaluación inicial y coordinación de traslado cuando corresponde.
         </p>
       </div>
     </div>
@@ -51,13 +56,13 @@ const waHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.ct
         href={waHref}
         class="inline-block px-6 py-3 bg-green-600 text-white rounded-full font-medium hover:bg-green-700 transition"
       >
-        📲 Solicitar orientación
+        Solicitar orientación por WhatsApp
       </a>
     </div>
 
     <p class="text-xs text-gray-500 mt-10 max-w-2xl mx-auto">
-      La asesoría entregada es independiente y no representa a ninguna institución médica. Los
-      servicios de salud son prestados únicamente por la empresa correspondiente.
+      Este sitio entrega información y orientación comercial independiente. No representa a empresas
+      médicas específicas ni presta servicios de salud directamente.
     </p>
   </div>
 </section>

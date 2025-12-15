@@ -1,9 +1,11 @@
 ---
-import { site } from '../data/site'
+import { SEO } from '../data/seo'
 ---
 
 <a
-  href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent('Hola, quiero más información sobre los planes de asistencia privada.')}`}
+  href={`https://wa.me/${SEO.identity.contact.whatsapp}?text=${encodeURIComponent(
+    'Hola, quiero información sobre planes de rescate en ambulancia privada.'
+  )}`}
   class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-green-500 shadow-xl flex items-center justify-center hover:bg-green-600 transition-colors"
   target="_blank"
   rel="noopener noreferrer"

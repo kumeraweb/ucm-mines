@@ -1,9 +1,9 @@
 ---
-import { site } from '../data/site'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import '../styles/global.css'
 import FloatingWhatsApp from '../components/FloatingWhatsApp.astro'
+import { SEO } from '../data/seo'
 
 interface Props {
   title?: string
@@ -12,8 +12,8 @@ interface Props {
 
 const { title, description } = Astro.props as Props
 
-const pageTitle = title ?? site.seo.title
-const pageDescription = description ?? site.seo.description
+const pageTitle = title ?? SEO.meta.title
+const pageDescription = description ?? SEO.meta.description
 ---
 
 <html lang="es">
@@ -23,9 +23,11 @@ const pageDescription = description ?? site.seo.description
 
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
+    <meta name="author" content={SEO.identity.siteName} />
+    <meta name="theme-color" content="#ffffff" />
 
     <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://planatencionhogar.cl/" />
+    <link rel="canonical" href={Astro.url.href} />
   </head>
 
   <body class="min-h-screen bg-white text-gray-800 antialiased">

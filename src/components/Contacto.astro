@@ -1,16 +1,21 @@
 ---
-import { site } from '../data/site'
-const waHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.cta.whatsappMessage)}`
-const phoneHref = `tel:${site.phone}`
+import { SEO } from '../data/seo'
+
+const waHref = `https://wa.me/${SEO.identity.contact.whatsapp}?text=${encodeURIComponent(
+  'Quiero recibir orientación sobre planes de rescate en ambulancia privada'
+)}`
+const phoneHref = `tel:${SEO.identity.contact.phone}`
 ---
 
 <section id="contacto" class="w-full py-20 bg-gray-50 border-t border-gray-200">
   <div class="max-w-5xl mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">¿Necesitas más información?</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      ¿Necesitas orientación sobre planes de asistencia privada?
+    </h2>
 
     <p class="text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
-      Recibe orientación clara y directa sobre alternativas de asistencia particular. Atención
-      rápida y sin compromiso.
+      Recibe información clara y sin compromiso sobre alternativas de rescate en ambulancia privada
+      y asistencia médica prehospitalaria, según tu necesidad y la de tu familia.
     </p>
 
     <!-- Botones principales -->
@@ -19,31 +24,32 @@ const phoneHref = `tel:${site.phone}`
         href={waHref}
         class="px-8 py-3 rounded-full bg-green-600 text-white font-semibold hover:bg-green-700 transition shadow-md w-full md:w-auto text-center"
       >
-        📲 Consultar por WhatsApp
+        Consultar por WhatsApp
       </a>
 
       <a
         href={phoneHref}
         class="px-8 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition shadow-md w-full md:w-auto text-center"
       >
-        📞 Llamar Ahora
+        Llamar para orientación
       </a>
     </div>
 
-    <!-- Tarjeta de información -->
+    <!-- Tarjeta informativa -->
     <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm max-w-xl mx-auto">
-      <h3 class="text-xl font-semibold text-gray-900 mb-4">Horario de Atención</h3>
+      <h3 class="text-xl font-semibold text-gray-900 mb-4">Atención y orientación comercial</h3>
 
       <ul class="text-gray-700 leading-relaxed text-sm md:text-base space-y-2">
-        <li>Lunes a Viernes: 09:00 – 19:00 hrs</li>
-        <li>Sábado: 10:00 – 14:00 hrs</li>
-        <li>Domingo y festivos: Atención por WhatsApp</li>
+        <li>Orientación personalizada según edad y tipo de cobertura</li>
+        <li>Explicación clara de alternativas de rescate y asistencia</li>
+        <li>Derivación a empresas prestadoras según disponibilidad</li>
       </ul>
     </div>
 
     <p class="text-xs md:text-sm text-gray-500 mt-10 max-w-3xl mx-auto">
-      La asesoría es independiente y de carácter comercial. Toda prestación de salud es realizada
-      exclusivamente por la empresa correspondiente.
+      Este sitio entrega asesoría comercial independiente. No representa ni pertenece a una empresa
+      médica específica. Los servicios médicos y de ambulancia son prestados exclusivamente por
+      empresas externas según el plan contratado.
     </p>
   </div>
 </section>

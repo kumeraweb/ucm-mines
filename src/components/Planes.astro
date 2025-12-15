@@ -1,17 +1,16 @@
 ---
-import { site } from '../data/site'
+import { SEO } from '../data/seo'
 ---
 
 <section id="planes" class="py-20 bg-white border-b border-gray-200">
   <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-6">
-      Planes de asistencia para tu familia
+      Planes de rescate en ambulancia privada
     </h2>
 
     <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-      Existen alternativas de asistencia privada que combinan rescate en ambulancia y apoyo médico
-      para distintos momentos de tu vida. La ejecutiva te orientará sobre cuál se adapta mejor a tu
-      realidad.
+      Información y orientación sobre planes de rescate en ambulancia privada y asistencia médica
+      prehospitalaria. Las alternativas varían según edad, grupo familiar y tipo de cobertura.
     </p>
 
     <div class="space-y-10">
@@ -22,7 +21,9 @@ import { site } from '../data/site'
         <div class="md:flex md:items-stretch">
           {/* Columna izquierda: nombre y precio de referencia */}
           <div class="md:w-1/2 px-8 md:px-12 py-10 md:py-14 flex flex-col justify-center">
-            <h3 class="text-3xl md:text-4xl font-extrabold tracking-wide mb-4">Plan Familiar</h3>
+            <h3 class="text-3xl md:text-4xl font-extrabold tracking-wide mb-4">
+              Plan de Asistencia Familiar
+            </h3>
 
             <div class="flex items-baseline gap-3 mb-4">
               <span class="text-sm uppercase tracking-[0.18em]">Desde</span>
@@ -58,12 +59,12 @@ import { site } from '../data/site'
         {/* CTA inferior centrado */}
         <div class="border-t border-blue-400/60 px-8 md:px-12 py-6 flex justify-center">
           <a
-            href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
+            href={`https://wa.me/${SEO.identity.contact.whatsapp}?text=${encodeURIComponent(
               'Quiero cotizar el plan familiar de asistencia privada'
             )}`}
             class="inline-flex items-center justify-center px-7 py-3 rounded-full bg-blue-600 text-white font-semibold text-sm md:text-base hover:bg-blue-700 transition"
           >
-            Cotizar Plan Familiar por WhatsApp
+            Solicitar orientación por WhatsApp
           </a>
         </div>
       </div>
@@ -76,7 +77,7 @@ import { site } from '../data/site'
           {/* Columna izquierda: nombre y precio de referencia */}
           <div class="md:w-1/2 px-8 md:px-12 py-10 md:py-14 flex flex-col justify-center">
             <h3 class="text-3xl md:text-4xl font-extrabold tracking-wide text-gray-900 mb-4">
-              Plan Senior
+              Plan de Asistencia Adulto Mayor
             </h3>
 
             <div class="flex items-baseline gap-3 mb-4">
@@ -113,20 +114,20 @@ import { site } from '../data/site'
         {/* CTA inferior centrado */}
         <div class="border-t border-gray-200 px-8 md:px-12 py-6 flex justify-center">
           <a
-            href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
+            href={`https://wa.me/${SEO.identity.contact.whatsapp}?text=${encodeURIComponent(
               'Quiero cotizar el plan senior de asistencia privada'
             )}`}
             class="inline-flex items-center justify-center px-7 py-3 rounded-full bg-gray-800 text-white font-semibold text-sm md:text-base hover:bg-gray-900 transition"
           >
-            Cotizar Plan Senior por WhatsApp
+            Consultar alternativas por WhatsApp
           </a>
         </div>
       </div>
     </div>
 
     <p class="text-xs md:text-sm text-gray-500 mt-6 text-center max-w-3xl mx-auto">
-      Los valores y beneficios específicos dependen del plan vigente al momento de contratar y serán
-      explicados en detalle por la ejecutiva antes de que tomes cualquier decisión.
+      Este sitio entrega orientación comercial independiente. Los servicios médicos y coberturas
+      finales dependen del proveedor contratado y serán explicados antes de cualquier contratación.
     </p>
   </div>
 </section>

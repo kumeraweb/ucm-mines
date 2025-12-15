@@ -1,21 +1,21 @@
 ---
 import BaseLayout from '../layout/BaseLayout.astro'
-import { site } from '../data/site'
 import Hero from '../components/Hero.astro'
 import Planes from '../components/Planes.astro'
 import Servicios from '../components/Servicios.astro'
 import Contacto from '../components/Contacto.astro'
+import { SEO } from '../data/seo'
 ---
 
-<BaseLayout title={site.seo.title} description={site.seo.description}>
+<BaseLayout title={SEO.meta.title} description={SEO.meta.description}>
   <Hero />
 
   <section id="planes">
     <Planes />
   </section>
-  <!-- <section id="servicios">
+  <section id="servicios">
     <Servicios />
-  </section> -->
+  </section>
   <section id="contacto">
     <Contacto />
   </section>
