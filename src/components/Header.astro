@@ -11,7 +11,7 @@ const waHref = `https://wa.me/${SEO.identity.contact.whatsapp}?text=${encodeURIC
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
     <!-- LOGO -->
     <a href="/" class="flex items-center">
-      <span class="text-xl font-semibold text-gray-800"> Asesoría en Asistencia Privada </span>
+      <span class="text-xl font-semibold text-gray-800">Planes rescate Movil</span>
     </a>
 
     <!-- DESKTOP MENU -->
@@ -37,7 +37,11 @@ const waHref = `https://wa.me/${SEO.identity.contact.whatsapp}?text=${encodeURIC
     </div>
 
     <!-- HAMBURGER BUTTON -->
-    <button id="mobile-toggle" class="md:hidden flex flex-col space-y-1">
+    <button
+      id="mobile-toggle"
+      aria-label="Abrir menú"
+      class="md:hidden flex flex-col justify-center space-y-1.5"
+    >
       <span class="w-6 h-0.5 bg-gray-800"></span>
       <span class="w-6 h-0.5 bg-gray-800"></span>
       <span class="w-6 h-0.5 bg-gray-800"></span>
@@ -47,7 +51,7 @@ const waHref = `https://wa.me/${SEO.identity.contact.whatsapp}?text=${encodeURIC
   <!-- MOBILE MENU -->
   <div
     id="mobile-menu"
-    class="md:hidden hidden flex-col px-4 pb-4 bg-white border-t border-gray-200 space-y-4"
+    class="md:hidden hidden flex flex-col px-4 py-6 bg-white border-t border-gray-200 gap-4"
   >
     <a href="#inicio" class="text-gray-700 hover:text-gray-900">Inicio</a>
     <a href="#planes" class="text-gray-700 hover:text-gray-900">Planes</a>
@@ -76,5 +80,11 @@ const waHref = `https://wa.me/${SEO.identity.contact.whatsapp}?text=${encodeURIC
 
   btn?.addEventListener('click', () => {
     menu.classList.toggle('hidden')
+  })
+
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden')
+    })
   })
 </script>
