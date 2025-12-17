@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layout/BaseLayout.astro'
 import Hero from '../components/Hero.astro'
+import PromoBanner from '../components/PromoBanner.astro'
 import Planes from '../components/Planes.astro'
 import Servicios from '../components/Servicios.astro'
 import Contacto from '../components/Contacto.astro'
@@ -9,6 +10,11 @@ import { SEO } from '../data/seo'
 
 <BaseLayout title={SEO.meta.title} description={SEO.meta.description}>
   <Hero />
+
+  <section class="grid gap-8 md:grid-cols-2 my-12">
+    <PromoBanner image="/prom1.jpeg" />
+    <PromoBanner image="/prom2.jpeg" />
+  </section>
 
   <section id="planes">
     <Planes />
