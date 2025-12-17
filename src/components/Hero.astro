@@ -8,20 +8,36 @@ const waHref = `https://wa.me/${SEO.identity.contact.whatsapp}?text=${encodeURIC
 const phoneHref = `tel:${SEO.identity.contact.phone}`
 ---
 
-<section id="inicio" class="w-full bg-gray-50 border-b border-gray-200">
-  <div class="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
+<section id="inicio" class="relative w-full border-b border-gray-200 bg-gray-50 md:bg-transparent">
+  <!-- Background image only on mobile -->
+  <div
+    class="absolute inset-0 bg-cover bg-center md:hidden"
+    style="background-image: url('/ambulance.webp');"
+    aria-hidden="true"
+  >
+    <div class="absolute inset-0 bg-black/50"></div>
+  </div>
+
+  <div class="relative grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
     <!-- CONTENIDO SEMÁNTICO -->
-    <div class="flex flex-col justify-center px-6 md:px-12 py-16">
+    <div
+      class="flex flex-col justify-center px-6 md:px-12 py-16
+             text-white md:text-gray-900"
+    >
       <!-- H1 SEO PRINCIPAL -->
-      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+      <h1
+        class="text-4xl md:text-5xl font-extrabold text-white md:text-gray-900 leading-tight mb-6"
+      >
         Contrata planes de rescate Coronaria Movil
       </h1>
 
       <!-- INTENCIÓN PRIMARIA -->
-      <h2 class="text-xl md:text-2xl text-gray-700 mb-6">Ingrese hoy a Rescate Emergencia 24/7</h2>
+      <h2 class="text-xl md:text-2xl text-gray-200 md:text-gray-700 mb-6">
+        Ingrese hoy a Rescate Emergencia 24/7
+      </h2>
 
       <!-- SOPORTE SEMÁNTICO -->
-      <p class="text-gray-600 text-lg leading-relaxed mb-10">
+      <p class="text-gray-200 md:text-gray-600 text-lg leading-relaxed mb-10">
         Contacta a una ejecutiva ahora y recibe orientación clara para contratar el plan que mejor
         se adapte a tu familia o adulto mayor.
       </p>
@@ -46,7 +62,7 @@ const phoneHref = `tel:${SEO.identity.contact.phone}`
 
     <!-- IMAGEN -->
     <div
-      class="relative bg-cover bg-center"
+      class="relative hidden md:block bg-cover bg-center"
       style="background-image: url('/ambulance.webp');"
       aria-hidden="true"
     >
